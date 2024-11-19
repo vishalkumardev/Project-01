@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+<title>PRS</title>
+
+<style>
+
+body{
+background-image: url("../static/116316-abstract-cyan-defocused-background-design.jpg");
+Background-size: cover;
+}
+
+form{
+text-align: center
+}
+
+input{
+width: 25%
+}
+
+input[type=submit]{
+	background-color: green;
+	color: white;
+	width: 10%
+}
+
+label {
+	font-size: 20px;
+	display: inline_block;
+	width: 150px;
+	text-align: right;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<center><h1>Admission Prediction System</h1></center>
+
+<form action='/predict' method="post">
+
+<label for = "time_spent">Communication Skills</label>
+<input type = 'number', name = 'time_spent', required = 'required'>
+
+<br></br>
+
+<label for = "num_pages_visited">Student Behaviour</label>
+<input type = 'number', name = 'num_pages_visited', required = 'required'>
+
+<br></br>
+
+<label for = "clicked_admission_page">Mental Health</label>
+<input type = 'number', name = 'clicked_admission_page', required = 'required'>
+
+<br></br>
+
+<label for = "student_score">Previous academic performance</label>
+<input type = 'number', name = 'student_score', required = 'required'>
+
+
+
+
+<label></label>
+<input id = "submit" type = "submit" value =admitted ></input>
+
+</form>
+<center><h3>{{result}}</h3></center>
+</body>
+
+</html>
